@@ -1,0 +1,18 @@
+// header menu
+.header__menu {
+  flex: 0 0 12.1522694%;
+
+  display: flex;
+  align-items: center;
+
+  &-icon {
+    width: 2.2rem;
+    height: 2.2rem;
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+
+  &-text {
+    float: right;
+  }
+}

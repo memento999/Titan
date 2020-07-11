@@ -1,0 +1,71 @@
+.main__swiper {
+  flex: 0 0 65.8125915081%;
+  margin-right: 8rem;
+  border-radius: 1.2rem;
+  overflow: hidden;
+
+  @include respond(phone) {
+    flex: 0 0 92%;
+    margin: 0 auto;
+    height: 39.8rem;
+  }
+
+  &--slide {
+    background-color: lime;
+    text-align: center;
+    width: 100%;
+
+    &:first-child {
+      background: url(../../../assets/img/Rectangle_218@4x.webp);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+// change main swiper default styling
+// swiper arrows
+.swiper-button-next,
+.swiper-button-prev {
+  --swiper-theme-color: black;
+  --swiper-navigation-size: 1.2rem;
+
+  @include respond(phone) {
+    display: none;
+  }
+}
+
+.main__swiper--button-prev,
+.main__swiper--button-next {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 1rem;
+  background-color: $color-white;
+}
+
+.main__swiper--button-prev {
+  margin-left: 5rem;
+}
+
+.main__swiper--button-next {
+  margin-right: 5rem;
+}
+
+// swiper buttons
+.main__swiper--pagination {
+  .swiper-pagination-bullet {
+    width: 1.3rem;
+    height: 1.3rem;
+    background-color: #fec0b0;
+
+    &-active {
+      background-color: $primary-color;
+    }
+  }
+}

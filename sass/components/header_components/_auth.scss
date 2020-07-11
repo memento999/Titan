@@ -1,0 +1,27 @@
+.auth {
+  flex: 0 0 14.2752562225%;
+  height: 5rem;
+  margin-right: 8.1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.1rem;
+  cursor: pointer;
+
+  &> :not(:last-child) {
+    margin-right: 1.5rem;
+  }
+
+  background-color: $secondary-color;
+
+  &__icon {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  &__text {
+    line-height: 1.8;
+    color: $color-white;
+  }
+}

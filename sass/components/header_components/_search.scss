@@ -1,0 +1,55 @@
+// HEADER SEARCH FORM
+.search {
+  display: flex;
+  flex: 0 0 28.4773060029%;
+  height: 5rem;
+
+  &__input {
+    // structure
+    width: 100%;
+    padding-left: 2rem;
+    margin-right: -5rem;
+    border: none;
+    border-radius: .5rem;
+
+    // skin
+    background-color: $color-grey-light;
+    font-family: "Helvetica Neue LTGEOW 82-55 Rm";
+
+    &::placeholder {
+      opacity: .6;
+      font-size: $font-size-sm;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__button {
+    // structure
+    border: none;
+    border-radius: .7rem;
+    width: 4rem;
+    margin: .5rem;
+    position: relative;
+
+    // skin
+    background-color: $primary-color;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__icon {
+    width: 1.8rem;
+    height: 1.8rem;
+    @include centering;
+
+    use {
+      fill: $color-white;
+    }
+  }
+}

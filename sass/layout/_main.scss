@@ -1,0 +1,10 @@
+.main {
+  display: flex;
+  padding-top: 5.1rem;
+
+  background-color: orangered;
+
+  @include respond(phone) {
+    padding-top: 6rem;
+  }
+}

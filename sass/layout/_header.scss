@@ -1,0 +1,11 @@
+.header {
+  height: 11rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lime;
+
+  @include respond(phone) {
+    display: none;
+  }
+}

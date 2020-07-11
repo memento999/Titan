@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "BPG LE Studio 04 Caps";
+  src: url(./fonts/bpg-le-studio-04-caps-webfont.ttf);
+}
+
+@font-face {
+  font-family: "Helvetica Neue LTGEOW 82-55 Rm";
+  src: url(./fonts/helvetica-heue-ltgeow-82-55-rm.ttf);
+}
+
+@font-face {
+  font-family: "Helvetica Neue LTGEOW 82-75 Bd";
+  src: url(./fonts/helvetica-neue-ltgeow-82-75-bd.ttf);
+}
+
+// @font-face {
+//   font-family: myFirstFont;
+//   src: url(sansation_light.woff);
+// }
+
+body {
+  font-family: "BPG LE Studio 04 Caps";
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+// HEADER
+.header {
+  font-size: $font-size-sm;
+
+  &__menu-text {
+    line-height: 1.5;
+    color: $color-black;
+  }
+}

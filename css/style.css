@@ -1,0 +1,269 @@
+/*
+  0 - 600px: Phone
+  600 - 900px: Tablet portrait
+  900 - 1200px: Tablet lanscape
+  [1200 - 1800] is where our normal styles apply
+  1800px + : Big desktop
+
+  
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+1em = 16px
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 43.75%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 37.5%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 31.25%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  box-sizing: border-box; }
+
+@font-face {
+  font-family: "BPG LE Studio 04 Caps";
+  src: url(./fonts/bpg-le-studio-04-caps-webfont.ttf); }
+
+@font-face {
+  font-family: "Helvetica Neue LTGEOW 82-55 Rm";
+  src: url(./fonts/helvetica-heue-ltgeow-82-55-rm.ttf); }
+
+@font-face {
+  font-family: "Helvetica Neue LTGEOW 82-75 Bd";
+  src: url(./fonts/helvetica-neue-ltgeow-82-75-bd.ttf); }
+
+body {
+  font-family: "BPG LE Studio 04 Caps";
+  font-weight: 400;
+  line-height: 1.7; }
+
+.header {
+  font-size: 1.2rem; }
+  .header__menu-text {
+    line-height: 1.5;
+    color: #000; }
+
+.header__logo {
+  height: 6rem;
+  margin-left: 8.1rem; }
+
+.header__menu {
+  flex: 0 0 12.1522694%;
+  display: flex;
+  align-items: center; }
+  .header__menu-icon {
+    width: 2.2rem;
+    height: 2.2rem;
+    margin-right: 1rem;
+    cursor: pointer; }
+  .header__menu-text {
+    float: right; }
+
+.search {
+  display: flex;
+  flex: 0 0 28.4773060029%;
+  height: 5rem; }
+  .search__input {
+    width: 100%;
+    padding-left: 2rem;
+    margin-right: -5rem;
+    border: none;
+    border-radius: .5rem;
+    background-color: #fafafa;
+    font-family: "Helvetica Neue LTGEOW 82-55 Rm"; }
+    .search__input::placeholder {
+      opacity: .6;
+      font-size: 1.2rem; }
+    .search__input:focus {
+      outline: none; }
+  .search__button {
+    border: none;
+    border-radius: .7rem;
+    width: 4rem;
+    margin: .5rem;
+    position: relative;
+    background-color: #ff613b;
+    cursor: pointer; }
+    .search__button:focus {
+      outline: none; }
+  .search__icon {
+    width: 1.8rem;
+    height: 1.8rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .search__icon use {
+      fill: #fff; }
+
+.cart {
+  flex: 0 0 8.345534407%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  border-radius: 1.1rem;
+  cursor: pointer;
+  background-color: #ff613b; }
+  .cart > :not(:last-child) {
+    margin-right: 1.5rem; }
+  .cart__icon {
+    width: 1.8rem;
+    height: 1.8rem; }
+  .cart__item-count {
+    position: relative;
+    border-radius: 50%;
+    width: 2.2rem;
+    height: 2.2rem;
+    background-color: #fff; }
+    .cart__item-count > * {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #ff613b;
+      font-family: "Helvetica Neue LTGEOW 82-75 Bd";
+      font-size: 1.4rem; }
+
+.auth {
+  flex: 0 0 14.2752562225%;
+  height: 5rem;
+  margin-right: 8.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.1rem;
+  cursor: pointer;
+  background-color: #32125b; }
+  .auth > :not(:last-child) {
+    margin-right: 1.5rem; }
+  .auth__icon {
+    width: 1.8rem;
+    height: 1.8rem; }
+  .auth__text {
+    line-height: 1.8;
+    color: #fff; }
+
+.main__menu {
+  flex: 0 0 21.0102489019%;
+  margin: 0 1.9rem 0 8rem;
+  border-radius: 1.2rem;
+  background-color: #fff;
+  font-size: 1.4rem; }
+  @media (max-width: 37.5em) {
+    .main__menu {
+      display: none; } }
+  .main__menu-layout {
+    padding: 4rem 3rem;
+    height: 100%; }
+    .main__menu-layout-unit {
+      list-style-type: none;
+      line-height: 1.8rem; }
+      .main__menu-layout-unit:not(:last-child) {
+        margin-bottom: 1.2rem; }
+    .main__menu-layout-unit:hover .main__menu-layout-item {
+      color: #ff613b; }
+    .main__menu-layout-item {
+      text-decoration: none;
+      color: #171717;
+      transition: all .01s;
+      width: inherit; }
+      .main__menu-layout-item:after {
+        display: inline-block;
+        margin: 0 1rem;
+        content: '';
+        background: url(../../../assets/img/cheveron-right.svg) no-repeat center;
+        height: 1.1rem;
+        width: .7rem;
+        margin-right: auto; }
+      .main__menu-layout-item:hover::after {
+        background: url(../../../assets/img/cheveron-right-2.svg) no-repeat center; }
+
+.main__swiper {
+  flex: 0 0 65.8125915081%;
+  margin-right: 8rem;
+  border-radius: 1.2rem;
+  overflow: hidden; }
+  @media (max-width: 37.5em) {
+    .main__swiper {
+      flex: 0 0 92%;
+      margin: 0 auto;
+      height: 39.8rem; } }
+  .main__swiper--slide {
+    background-color: lime;
+    text-align: center;
+    width: 100%; }
+    .main__swiper--slide:first-child {
+      background: url(../../../assets/img/Rectangle_218@4x.webp);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center; }
+    .main__swiper--slide img {
+      width: 100%;
+      height: 100%; }
+
+.swiper-button-next,
+.swiper-button-prev {
+  --swiper-theme-color: black;
+  --swiper-navigation-size: 1.2rem; }
+  @media (max-width: 37.5em) {
+    .swiper-button-next,
+    .swiper-button-prev {
+      display: none; } }
+
+.main__swiper--button-prev,
+.main__swiper--button-next {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 1rem;
+  background-color: #fff; }
+
+.main__swiper--button-prev {
+  margin-left: 5rem; }
+
+.main__swiper--button-next {
+  margin-right: 5rem; }
+
+.main__swiper--pagination .swiper-pagination-bullet {
+  width: 1.3rem;
+  height: 1.3rem;
+  background-color: #fec0b0; }
+  .main__swiper--pagination .swiper-pagination-bullet-active {
+    background-color: #ff613b; }
+
+.header {
+  height: 11rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lime; }
+  @media (max-width: 37.5em) {
+    .header {
+      display: none; } }
+
+.main {
+  display: flex;
+  padding-top: 5.1rem;
+  background-color: orangered; }
+  @media (max-width: 37.5em) {
+    .main {
+      padding-top: 6rem; } }

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>TITAN</title>
+</head>
+
+<body>
+  <!-- header -->
+  <header class="header">
+    <div class="header__logo-box">
+      <a href="index.html"><img class="header__logo" src="./assets/img/Logo.svg" alt="Logo"></a>
+    </div>
+
+    <div class="header__menu">
+      <img class="header__menu-icon" src="./assets/img/icons8-menu.svg" alt="Burger Icon">
+      <div class="header__menu-text">ყველა კატეგორია</div>
+    </div>
+
+    <form action="#" class="search">
+      <input class="search__input" type="text" name="search" placeholder="მოძებნე მარტივად">
+      <a class="search__button">
+        <svg class="search__icon">
+          <use href="./assets/img/sprite.svg#icon-search" />
+          </use>
+        </svg>
+      </a>
+    </form>
+
+    <div class="cart">
+      <img class="cart__icon" src="./assets/img/shopping-cart.svg" alt="Shopping Cart">
+      <p class="cart__item-count"><span id="item-count">0</span></p>
+    </div>
+
+    <div class="auth">
+      <img class="auth__icon" src="./assets/img/user.svg" alt="User Icon">
+      <p class="auth__text">ავტორიზაცია</p>
+    </div>
+  </header>
+  <!-- end of header -->
+
+  <!-- main -->
+  <main class="main">
+    <div class="main__menu">
+      <ul class="main__menu-layout">
+        <li class="main__menu-layout-unit"><a href="#" class="main__menu-layout-item">თამაშირ მუყაო</a></li>
+        <li class="main__menu-layout-unit"><a href="#" class="main__menu-layout-item">კერამიკული ფილები</a></li>
+        <li class="main__menu-layout-unit"><a href="#" class="main__menu-layout-item">იატაკი</a></li>
+        <li class="main__menu-layout-unit"><a href="#" class="main__menu-layout-item">სამღებრო</a></li>
+        <li class="main__menu-layout-unit"><a href="#" class="main__menu-layout-item">ხელსაწყოები</a></li>
+        <li class="main__menu-layout-unit"><a href="#" class="main__menu-layout-item">კარი</a></li>
+        <li class="main__menu-layout-unit"><a href="#" class="main__menu-layout-item">ელექტროობა</a></li>
+        <li class="main__menu-layout-unit"><a href="#" class="main__menu-layout-item">შპალერი და დეკორი</a></li>
+        <li class="main__menu-layout-unit"><a href="#" class="main__menu-layout-item">სანტექნიკა</a></li>
+        <li class="main__menu-layout-unit"><a href="#" class="main__menu-layout-item">სამონტაჟო ჭერი</a></li>
+        <li class="main__menu-layout-unit"><a href="#" class="main__menu-layout-item">მშენებლობა</a></li>
+      </ul>
+    </div>
+
+    <!-- main swiper -->
+    <div class="swiper-container main__swiper">
+      <div class="swiper-wrapper main__swiper--wrapper">
+        <div class="swiper-slide main__swiper--slide"></div>
+        <div class="swiper-slide main__swiper--slide">Slide 2</div>
+        <div class="swiper-slide main__swiper--slide">Slide 3</div>
+      </div>
+      <!-- Add Arrows -->
+      <div class="swiper-button-next main__swiper--button-next"></div>
+      <div class="swiper-button-prev main__swiper--button-prev"></div>
+
+      <!-- Add Pagination -->
+      <div class="swiper-pagination main__swiper--pagination"></div>
+    </div>
+  </main>
+  <!-- end of main -->
+
+  <!-- Swiper JS -->
+  <script src="./scripts/swiper-bundle.min.js"></script>
+  <script src="./scripts/swipers/main-swiper.js"></script>
+</body>
+
+</html>
