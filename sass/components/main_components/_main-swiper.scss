@@ -58,14 +58,23 @@
 }
 
 // swiper buttons
-.main__swiper--pagination {
-  .swiper-pagination-bullet {
-    width: 1.3rem;
-    height: 1.3rem;
-    background-color: #fec0b0;
+// .main__swiper--pagination {}
 
-    &-active {
-      background-color: $primary-color;
-    }
+.swiper-pagination-bullet {
+  width: 13px;
+  height: 13px;
+  border-radius: 3px;
+  background-color: #fec0b0;
+
+  &-active {
+    background-color: $primary-color;
+  }
+}
+
+@media screen and (min-width: 37.5625em) {
+
+  // 601px
+  .swiper-pagination {
+    display: none;
   }
 }

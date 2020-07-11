@@ -34,12 +34,12 @@
 
     &>* {
       // structure
-      @include centering;
+      @include absCenter;
 
       // skin
       color: $primary-color;
       font-family: "Helvetica Neue LTGEOW 82-75 Bd";
-      font-size: 1.4rem;
+      font-size: $font-size-md;
     }
   }
 }

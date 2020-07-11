@@ -17,10 +17,17 @@
 // main components
 @import "components/main_components/main-menu";
 @import "components/main_components/main-swiper";
+// top products section components
+@import "components/top-products-swiper";
+// general components
+@import "components/card";
+@import "components/button";
+
 
 // layouts
 @import "layout/header";
 @import "layout/main";
+@import "layout/top-products";
 
 // pages
 @import "pages/home";

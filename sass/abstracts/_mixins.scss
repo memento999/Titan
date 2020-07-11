@@ -7,7 +7,7 @@
 }
 
 // centering child elements inside parent element(parent must be in a relative position)
-@mixin centering {
+@mixin absCenter {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -40,13 +40,6 @@ $breakpoint argument choices:
       @content;
     }
   }
-
-  // @if ($breakpoint==phone) {
-  //   @media (min-width: 37.5em) {
-  //     //600px
-  //     @content;
-  //   }
-  // }
 
   @if ($breakpoint==tab-port) {
     @media (max-width: 56.25em) {

@@ -177,9 +177,20 @@ body {
     height: 100%; }
     .main__menu-layout-unit {
       list-style-type: none;
-      line-height: 1.8rem; }
+      line-height: 1.8rem;
+      display: flex;
+      justify-content: space-between; }
       .main__menu-layout-unit:not(:last-child) {
         margin-bottom: 1.2rem; }
+      .main__menu-layout-unit:after {
+        display: inline-block;
+        margin: 0 1rem;
+        content: '';
+        background: url(../assets/img/cheveron-right.svg) no-repeat center;
+        height: 11px;
+        width: 7px; }
+      .main__menu-layout-unit:hover::after {
+        background: url(../../../assets/img/cheveron-right-2.svg) no-repeat center; }
     .main__menu-layout-unit:hover .main__menu-layout-item {
       color: #ff613b; }
     .main__menu-layout-item {
@@ -187,16 +198,6 @@ body {
       color: #171717;
       transition: all .01s;
       width: inherit; }
-      .main__menu-layout-item:after {
-        display: inline-block;
-        margin: 0 1rem;
-        content: '';
-        background: url(../../../assets/img/cheveron-right.svg) no-repeat center;
-        height: 1.1rem;
-        width: .7rem;
-        margin-right: auto; }
-      .main__menu-layout-item:hover::after {
-        background: url(../../../assets/img/cheveron-right-2.svg) no-repeat center; }
 
 .main__swiper {
   flex: 0 0 65.8125915081%;
@@ -243,12 +244,97 @@ body {
 .main__swiper--button-next {
   margin-right: 5rem; }
 
-.main__swiper--pagination .swiper-pagination-bullet {
-  width: 1.3rem;
-  height: 1.3rem;
+.swiper-pagination-bullet {
+  width: 13px;
+  height: 13px;
+  border-radius: 3px;
   background-color: #fec0b0; }
-  .main__swiper--pagination .swiper-pagination-bullet-active {
+  .swiper-pagination-bullet-active {
     background-color: #ff613b; }
+
+@media screen and (min-width: 37.5625em) {
+  .swiper-pagination {
+    display: none; } }
+
+.top-products__header {
+  margin: 3.9rem 0 .7rem 3rem;
+  font-size: 2.4rem;
+  line-height: 2;
+  color: #000; }
+
+.top-products__link {
+  margin-left: 3rem; }
+  .top-products__link a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: #ff613b; }
+
+.top-products__swiper {
+  flex: 0 0 88.2137628111%;
+  background-color: #fff;
+  margin: 3.9rem 3rem 4rem 3rem; }
+
+.card {
+  width: 23.6rem;
+  height: 41.8rem; }
+  .card__image {
+    position: relative;
+    margin: 1rem;
+    height: 21.6rem; }
+    .card__image img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: auto; }
+  .card__details {
+    margin: .7rem 2rem 3.1rem 2rem;
+    height: 6.6rem; }
+  .card__title, .card__id {
+    font-family: "Helvetica Neue LTGEOW 82-55 Rm";
+    font-size: 1.6rem;
+    color: #171717; }
+    .card__title span, .card__id span {
+      font-size: 1.8rem; }
+  .card__price {
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    position: relative;
+    margin-top: 1.6rem; }
+    .card__price-real {
+      margin-right: 1.4rem;
+      font-family: "Helvetica Neue LTGEOW 82-75 Bd";
+      font-size: 1.8rem;
+      color: #ff613b; }
+    .card__price-sale {
+      font-family: "Helvetica Neue LTGEOW 82-55 Rm";
+      font-size: 1.4rem;
+      color: #000;
+      text-decoration: line-through;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+  .card__btn--1 {
+    margin: 6.16rem 2rem 0 2rem; }
+
+.btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 19.6rem;
+  height: 5rem;
+  border-radius: 13px;
+  background-color: #ff613b;
+  text-decoration: none; }
+  .btn__icon {
+    margin-left: 2rem; }
+  .btn__caption {
+    margin-right: 2rem;
+    font-size: 1.2rem;
+    line-height: 4;
+    color: #fff; }
 
 .header {
   height: 11rem;
@@ -267,3 +353,9 @@ body {
   @media (max-width: 37.5em) {
     .main {
       padding-top: 6rem; } }
+
+.top-products {
+  display: flex;
+  flex-direction: column;
+  margin: 0 8rem 0 8rem;
+  background-color: olivedrab; }

@@ -17,9 +17,24 @@
     &-unit {
       list-style-type: none;
       line-height: 1.8rem;
+      display: flex;
+      justify-content: space-between;
 
       &:not(:last-child) {
         margin-bottom: 1.2rem;
+      }
+
+      &:after {
+        display: inline-block;
+        margin: 0 1rem;
+        content: '';
+        background: url(../assets/img/cheveron-right.svg) no-repeat center;
+        height: 11px;
+        width: 7px;
+      }
+
+      &:hover::after {
+        background: url(../../../assets/img/cheveron-right-2.svg) no-repeat center;
       }
     }
 
@@ -32,21 +47,6 @@
       color: $color-very-dark-grey;
       transition: all .01s;
       width: inherit;
-
-      &:after {
-        display: inline-block;
-        margin: 0 1rem;
-        content: '';
-        background: url(../../../assets/img/cheveron-right.svg) no-repeat center;
-        // float: right;
-        height: 1.1rem;
-        width: .7rem;
-        margin-right: auto;
-      }
-
-      &:hover::after {
-        background: url(../../../assets/img/cheveron-right-2.svg) no-repeat center;
-      }
     }
   }
 }
