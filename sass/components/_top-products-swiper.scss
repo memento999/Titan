@@ -1,15 +1,20 @@
 .top-products {
+  position: relative;
+
   &__header {
+    position: absolute;
     margin: 3.9rem 0 .7rem 3rem;
     font-size: 2.4rem;
     line-height: 2;
     color: $color-black;
+    z-index: 9999;
   }
 
   &__link {
     margin-left: 3rem;
 
     a {
+      position: absolute;
       text-decoration: none;
       font-size: $font-size-md;
       color: $primary-color;
@@ -22,9 +27,15 @@
     margin: 3.9rem 3rem 4rem 3rem;
   }
 
-  // &__wrapper {}
-
-  &__slide {
-    // width: 23.6rem;
+  &__wrapper {
+    padding-top: 5.6rem;
   }
+
+  &__button-next {
+    position: absolute;
+    top: 5px;
+    color: red;
+  }
+
+  &__button-prev {}
 }
