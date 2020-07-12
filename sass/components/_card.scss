@@ -1,8 +1,16 @@
 .card {
   width: 23.6rem;
-  height: 41.8rem;
+  transition: all .01s ease;
+  border: 1px solid transparent;
 
-  background-color: aquamarine;
+  &:hover {
+    position: absolute;
+    z-index: 3;
+    border-radius: 1rem;
+    border: 1px solid #E2E7ED;
+    transform: scale(1.01);
+    backface-visibility: hidden;
+  }
 
   &__image {
     position: relative;
@@ -40,8 +48,8 @@
     display: flex;
     justify-content: flex-start;
     text-align: center;
-    position: relative;
     margin-top: 1.6rem;
+    position: relative;
 
     &-real {
       margin-right: 1.4rem;
@@ -60,6 +68,6 @@
   }
 
   &__btn--1 {
-    margin: 6.16rem 2rem 0 2rem;
+    margin: 6.16rem 2rem 1rem 2rem;
   }
 }

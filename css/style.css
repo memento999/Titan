@@ -176,19 +176,21 @@ body {
     padding: 4rem 3rem;
     height: 100%; }
     .main__menu-layout-unit {
+      display: flex;
+      justify-content: space-between;
       list-style-type: none;
       line-height: 1.8rem;
-      display: flex;
-      justify-content: space-between; }
+      position: relative; }
       .main__menu-layout-unit:not(:last-child) {
         margin-bottom: 1.2rem; }
       .main__menu-layout-unit:after {
-        display: inline-block;
-        margin: 0 1rem;
         content: '';
         background: url(../assets/img/cheveron-right.svg) no-repeat center;
         height: 11px;
-        width: 7px; }
+        width: 7px;
+        position: absolute;
+        right: 0;
+        top: 0; }
       .main__menu-layout-unit:hover::after {
         background: url(../../../assets/img/cheveron-right-2.svg) no-repeat center; }
     .main__menu-layout-unit:hover .main__menu-layout-item {
@@ -226,10 +228,11 @@ body {
 .swiper-button-prev {
   --swiper-theme-color: black;
   --swiper-navigation-size: 1.2rem; }
-  @media (max-width: 37.5em) {
-    .swiper-button-next,
-    .swiper-button-prev {
-      display: none; } }
+
+@media (max-width: 37.5em) {
+  .main__swiper--button-next,
+  .main__swiper--button-prev {
+    display: none; } }
 
 .main__swiper--button-prev,
 .main__swiper--button-next {
@@ -256,37 +259,59 @@ body {
   .swiper-pagination {
     display: none; } }
 
-.top-products {
+.top-products__header {
+  position: absolute;
+  top: 3.9rem;
+  left: 3rem;
+  z-index: 2; }
+
+.top-products__title {
+  margin-bottom: .7rem;
+  font-size: 2.4rem;
+  line-height: 2;
+  color: #000; }
+
+.top-products__link a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #ff613b; }
+
+.top-products__swiper {
+  flex: 0 0 88.2137628111%;
+  background-color: #fff;
+  margin: 0;
   position: relative; }
-  .top-products__header {
-    position: absolute;
-    margin: 3.9rem 0 .7rem 3rem;
-    font-size: 2.4rem;
-    line-height: 2;
-    color: #000;
-    z-index: 9999; }
-  .top-products__link {
-    margin-left: 3rem; }
-    .top-products__link a {
-      position: absolute;
-      text-decoration: none;
-      font-size: 1.4rem;
-      color: #ff613b; }
-  .top-products__swiper {
-    flex: 0 0 88.2137628111%;
-    background-color: #fff;
-    margin: 3.9rem 3rem 4rem 3rem; }
-  .top-products__wrapper {
-    padding-top: 5.6rem; }
-  .top-products__button-next {
-    position: absolute;
-    top: 5px;
-    color: red; }
+
+.top-products__swiper-wrapper {
+  padding-top: 14.4rem; }
+
+.top-products__slider-arrows {
+  position: absolute;
+  top: 5.6rem;
+  right: 3.6rem;
+  width: 6.7rem;
+  height: 2.2rem;
+  display: flex;
+  justify-content: space-between; }
+
+.top-products__button-next, .top-products__button-prev {
+  width: 1.8rem;
+  height: 1.8rem;
+  cursor: pointer; }
+  .top-products__button-next::after, .top-products__button-prev::after {
+    content: ''; }
 
 .card {
   width: 23.6rem;
-  height: 41.8rem;
-  background-color: aquamarine; }
+  transition: all .01s ease;
+  border: 1px solid transparent; }
+  .card:hover {
+    position: absolute;
+    z-index: 3;
+    border-radius: 1rem;
+    border: 1px solid #E2E7ED;
+    transform: scale(1.01);
+    backface-visibility: hidden; }
   .card__image {
     position: relative;
     margin: 1rem;
@@ -310,8 +335,8 @@ body {
     display: flex;
     justify-content: flex-start;
     text-align: center;
-    position: relative;
-    margin-top: 1.6rem; }
+    margin-top: 1.6rem;
+    position: relative; }
     .card__price-real {
       margin-right: 1.4rem;
       font-family: "Helvetica Neue LTGEOW 82-75 Bd";
@@ -327,7 +352,7 @@ body {
       left: 50%;
       transform: translate(-50%, -50%); }
   .card__btn--1 {
-    margin: 6.16rem 2rem 0 2rem; }
+    margin: 6.16rem 2rem 1rem 2rem; }
 
 .btn {
   display: flex;
@@ -339,7 +364,9 @@ body {
   background-color: #ff613b;
   text-decoration: none; }
   .btn__icon {
-    margin-left: 2rem; }
+    margin-left: 2rem;
+    width: 1.8rem;
+    height: 1.8rem; }
   .btn__caption {
     margin-right: 2rem;
     font-size: 1.2rem;
@@ -350,8 +377,7 @@ body {
   height: 11rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  background-color: lime; }
+  align-items: center; }
   @media (max-width: 37.5em) {
     .header {
       display: none; } }
@@ -359,13 +385,19 @@ body {
 .main {
   display: flex;
   padding-top: 5.1rem;
-  background-color: orangered; }
+  background-color: #fafafa; }
   @media (max-width: 37.5em) {
     .main {
       padding-top: 6rem; } }
 
 .top-products {
-  display: flex;
-  flex-direction: column;
-  margin: 0 8rem 0 8rem;
-  background-color: olivedrab; }
+  padding: 9rem 8rem 4rem 8rem;
+  background-color: #fafafa;
+  background-color: lime; }
+  .top-products__wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 3.9rem 3rem 0 3rem;
+    border-radius: 1rem;
+    overflow: hidden; }

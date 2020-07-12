@@ -35,7 +35,10 @@
 .swiper-button-prev {
   --swiper-theme-color: black;
   --swiper-navigation-size: 1.2rem;
+}
 
+.main__swiper--button-next,
+.main__swiper--button-prev {
   @include respond(phone) {
     display: none;
   }
@@ -58,7 +61,6 @@
 }
 
 // swiper buttons
-// .main__swiper--pagination {}
 
 .swiper-pagination-bullet {
   width: 13px;

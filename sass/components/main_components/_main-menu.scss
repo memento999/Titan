@@ -15,22 +15,24 @@
     height: 100%;
 
     &-unit {
-      list-style-type: none;
-      line-height: 1.8rem;
       display: flex;
       justify-content: space-between;
+      list-style-type: none;
+      line-height: 1.8rem;
+      position: relative;
 
       &:not(:last-child) {
         margin-bottom: 1.2rem;
       }
 
       &:after {
-        display: inline-block;
-        margin: 0 1rem;
         content: '';
         background: url(../assets/img/cheveron-right.svg) no-repeat center;
         height: 11px;
         width: 7px;
+        position: absolute;
+        right: 0;
+        top: 0;
       }
 
       &:hover::after {
