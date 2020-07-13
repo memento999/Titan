@@ -18,11 +18,7 @@
     height: 21.6rem;
 
     img {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: auto;
+      @include resImgNM;
     }
   }
 

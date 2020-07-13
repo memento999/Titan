@@ -5,14 +5,17 @@ var swiper = new Swiper(".top-products__swiper", {
     prevEl: ".swiper-button-prev",
   },
   breakpoints: {
-    375: {
+    275: {
       slidesPerView: 2,
     },
-    480: {
+    375: {
       slidesPerView: 3,
     },
-    700: {
+    480: {
       slidesPerView: 4,
+    },
+    700: {
+      slidesPerView: 5,
     },
     900: {
       slidesPerView: 5,

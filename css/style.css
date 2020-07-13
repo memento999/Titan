@@ -62,6 +62,32 @@ body {
     line-height: 1.5;
     color: #000; }
 
+.heading-primary {
+  color: #000;
+  font-size: 3.2rem;
+  font-weight: 400;
+  line-height: 4;
+  letter-spacing: 0; }
+
+.heading-secondary {
+  color: #000;
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 3.2;
+  letter-spacing: 0; }
+
+.heading-tertiary {
+  color: #000;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 2.7;
+  letter-spacing: 0; }
+
+.paragraph {
+  font-size: 1.4rem;
+  font-family: "Helvetica Neue LTGEOW 82-55 Rm";
+  font-weight: 400; }
+
 .header__logo {
   height: 6rem;
   margin-left: 8.1rem; }
@@ -277,19 +303,23 @@ body {
   color: #ff613b; }
 
 .top-products__swiper {
-  flex: 0 0 88.2137628111%;
+  width: 100%;
   background-color: #fff;
   margin: 0;
   position: relative; }
 
 .top-products__swiper-wrapper {
-  padding-top: 14.4rem; }
+  padding: 14.4rem 3rem 4rem 3rem; }
+  @media (max-width: 37.5em) {
+    .top-products__swiper-wrapper {
+      padding-left: 0;
+      padding-right: 0; } }
 
 .top-products__slider-arrows {
   position: absolute;
   top: 5.6rem;
   right: 3.6rem;
-  width: 6.7rem;
+  width: 8.7rem;
   height: 2.2rem;
   display: flex;
   justify-content: space-between; }
@@ -391,13 +421,38 @@ body {
       padding-top: 6rem; } }
 
 .top-products {
-  padding: 9rem 8rem 4rem 8rem;
+  max-width: 88.140556369%;
+  margin: 9rem auto 0;
   background-color: #fafafa;
   background-color: lime; }
   .top-products__wrapper {
-    display: flex;
-    flex-direction: column;
     position: relative;
-    margin: 3.9rem 3rem 0 3rem;
     border-radius: 1rem;
     overflow: hidden; }
+
+.section-about {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 7.9rem; }
+  .section-about__logo {
+    flex: 0 0 45.6808199122%;
+    margin-left: 5rem;
+    position: relative; }
+    .section-about__logo img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: auto; }
+    @media (max-width: 37.5em) {
+      .section-about__logo {
+        display: none; } }
+  .section-about__caption {
+    flex: 0 0 42.89897511%;
+    margin-right: 8.1rem; }
+    @media (max-width: 37.5em) {
+      .section-about__caption {
+        margin: 0 8.1rem;
+        flex: 0 0 88.140556369%; }
+        .section-about__caption .paragraph {
+          font-size: 2.4rem; } }

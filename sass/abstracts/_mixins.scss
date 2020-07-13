@@ -14,6 +14,15 @@
   transform: translate(-50%, -50%);
 }
 
+// responsive image <Netflix Method>
+@mixin resImgNM {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+}
+
 // MEDIA QUERY MANAGER
 
 /*

@@ -1,0 +1,34 @@
+.section-about {
+  display: flex;
+  justify-content: space-between;
+  // align-items: center;
+  margin-top: 7.9rem;
+
+  &__logo {
+    flex: 0 0 45.6808199122%;
+    margin-left: 5rem;
+    position: relative;
+
+    img {
+      @include resImgNM;
+    }
+
+    @include respond(phone) {
+      display: none;
+    }
+  }
+
+  &__caption {
+    flex: 0 0 42.89897511%;
+    margin-right: 8.1rem;
+
+    @include respond(phone) {
+      margin: 0 8.1rem;
+      flex: 0 0 88.140556369%;
+
+      .paragraph {
+        font-size: $font-size-huge;
+      }
+    }
+  }
+}
