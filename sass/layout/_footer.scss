@@ -1,28 +1,43 @@
 .footer {
-  width: 88.140556369%;
-  margin: 9rem auto 0 auto;
-  display: flex;
-  flex-direction: column;
+  &__wrapper {
+    width: 88.140556369%;
+    margin: 0 auto;
+
+    @include respond(phone) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
 
   &__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 14rem;
+
+    @include respond(phone) {
+      justify-content: center;
+    }
   }
 
   &__logo {
-
     img {
-      width: 100%;
-      height: auto;
+      height: 4rem;
+    }
+
+    @include respond(phone) {
+      display: none;
     }
   }
 
   &__nav {
-    flex: 0 0 51.02489019%;
     display: flex;
     flex-wrap: nowrap;
     text-align: center;
+
+    @include respond(phone) {
+      display: none;
+    }
   }
 
   &__links {
@@ -41,8 +56,48 @@
     }
   }
 
-  &__socials {}
+  &__socials {
 
+    &-link {
+      display: inline-block;
 
+      svg {
+        width: 1.8rem;
+        height: 1.8rem;
 
+        &:hover {
+          fill: $primary-color;
+        }
+      }
+
+      &:not(:last-child) {
+        margin-right: 1.7rem;
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 9.7rem;
+    border-bottom: 1px solid #f2f4f7;
+
+    span {
+      color: $primary-color;
+    }
+
+    @include respond(phone) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 18rem;
+
+      p {
+        &:not(:last-child) {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
 }

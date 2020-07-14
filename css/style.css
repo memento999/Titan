@@ -467,33 +467,78 @@ body {
         .section-about__caption .paragraph {
           font-size: 2.4rem; } }
 
-.footer {
+.footer__wrapper {
   width: 88.140556369%;
-  margin: 9rem auto 0 auto;
+  margin: 0 auto; }
+  @media (max-width: 37.5em) {
+    .footer__wrapper {
+      display: flex;
+      flex-direction: column-reverse; } }
+
+.footer__top {
   display: flex;
-  flex-direction: column; }
-  .footer__top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; }
-  .footer__logo img {
-    width: 100%;
-    height: auto; }
-  .footer__nav {
-    flex: 0 0 51.02489019%;
-    display: flex;
-    flex-wrap: nowrap;
-    text-align: center; }
-  .footer__links {
-    font-size: 1.4rem;
-    color: #000;
-    text-decoration: none;
-    line-height: 1.8;
-    transition: all .1s ease-out; }
-    .footer__links:not(:last-child) {
-      margin-right: 2.4rem; }
-    .footer__links:hover {
-      color: #ff613b; }
+  justify-content: space-between;
+  align-items: center;
+  height: 14rem; }
+  @media (max-width: 37.5em) {
+    .footer__top {
+      justify-content: center; } }
+
+.footer__logo img {
+  height: 4rem; }
+
+@media (max-width: 37.5em) {
+  .footer__logo {
+    display: none; } }
+
+.footer__nav {
+  display: flex;
+  flex-wrap: nowrap;
+  text-align: center; }
+  @media (max-width: 37.5em) {
+    .footer__nav {
+      display: none; } }
+
+.footer__links {
+  font-size: 1.4rem;
+  color: #000;
+  text-decoration: none;
+  line-height: 1.8;
+  transition: all .1s ease-out; }
+  .footer__links:not(:last-child) {
+    margin-right: 2.4rem; }
+  .footer__links:hover {
+    color: #ff613b; }
+
+.footer__socials-link {
+  display: inline-block; }
+  .footer__socials-link svg {
+    width: 1.8rem;
+    height: 1.8rem; }
+    .footer__socials-link svg:hover {
+      fill: #ff613b; }
+  .footer__socials-link:not(:last-child) {
+    margin-right: 1.7rem; }
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 9.7rem;
+  border-bottom: 1px solid #f2f4f7; }
+  .footer__bottom span {
+    color: #ff613b; }
+  @media (max-width: 37.5em) {
+    .footer__bottom {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 18rem; }
+      .footer__bottom p:not(:last-child) {
+        margin-bottom: 1rem; } }
 
 body {
   background-color: #fafafa; }
+  body .footer {
+    margin-top: 9.7rem;
+    background-color: #fff; }
