@@ -66,7 +66,6 @@ body {
   color: #000;
   font-size: 3.2rem;
   font-weight: 400;
-  line-height: 4;
   letter-spacing: 0; }
 
 .heading-secondary {
@@ -87,6 +86,21 @@ body {
   font-size: 1.4rem;
   font-family: "Helvetica Neue LTGEOW 82-55 Rm";
   font-weight: 400; }
+
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 3.4rem; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem; }
+
+.u-margin-top-huge {
+  margin-top: 10rem; }
 
 .header__logo {
   height: 6rem;
@@ -242,7 +256,7 @@ body {
     text-align: center;
     width: 100%; }
     .main__swiper--slide:first-child {
-      background: url(../../../assets/img/Rectangle_218@4x.webp);
+      background: url(../assets/img/Rectangle_218@4x.webp);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center; }
@@ -422,9 +436,7 @@ body {
 
 .top-products {
   max-width: 88.140556369%;
-  margin: 9rem auto 0;
-  background-color: #fafafa;
-  background-color: lime; }
+  margin: 9rem auto 0; }
   .top-products__wrapper {
     position: relative;
     border-radius: 1rem;
@@ -433,15 +445,13 @@ body {
 .section-about {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 7.9rem; }
   .section-about__logo {
     flex: 0 0 45.6808199122%;
     margin-left: 5rem;
     position: relative; }
     .section-about__logo img {
-      position: absolute;
-      left: 0;
-      top: 0;
       width: 100%;
       height: auto; }
     @media (max-width: 37.5em) {
@@ -452,7 +462,38 @@ body {
     margin-right: 8.1rem; }
     @media (max-width: 37.5em) {
       .section-about__caption {
-        margin: 0 8.1rem;
-        flex: 0 0 88.140556369%; }
+        flex: 0 0 88.140556369%;
+        margin: 0 auto; }
         .section-about__caption .paragraph {
           font-size: 2.4rem; } }
+
+.footer {
+  width: 88.140556369%;
+  margin: 9rem auto 0 auto;
+  display: flex;
+  flex-direction: column; }
+  .footer__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .footer__logo img {
+    width: 100%;
+    height: auto; }
+  .footer__nav {
+    flex: 0 0 51.02489019%;
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: center; }
+  .footer__links {
+    font-size: 1.4rem;
+    color: #000;
+    text-decoration: none;
+    line-height: 1.8;
+    transition: all .1s ease-out; }
+    .footer__links:not(:last-child) {
+      margin-right: 2.4rem; }
+    .footer__links:hover {
+      color: #ff613b; }
+
+body {
+  background-color: #fafafa; }

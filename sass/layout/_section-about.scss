@@ -1,7 +1,7 @@
 .section-about {
   display: flex;
   justify-content: space-between;
-  // align-items: center;
+  align-items: center;
   margin-top: 7.9rem;
 
   &__logo {
@@ -10,7 +10,8 @@
     position: relative;
 
     img {
-      @include resImgNM;
+      width: 100%;
+      height: auto;
     }
 
     @include respond(phone) {
@@ -23,8 +24,8 @@
     margin-right: 8.1rem;
 
     @include respond(phone) {
-      margin: 0 8.1rem;
       flex: 0 0 88.140556369%;
+      margin: 0 auto;
 
       .paragraph {
         font-size: $font-size-huge;
