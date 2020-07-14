@@ -22,7 +22,7 @@
 
   &__logo {
     img {
-      height: 4rem;
+      height: 6rem;
     }
 
     @include respond(phone) {
@@ -62,8 +62,8 @@
       display: inline-block;
 
       svg {
-        width: 1.8rem;
-        height: 1.8rem;
+        width: 18px;
+        height: 18px;
 
         &:hover {
           fill: $primary-color;
@@ -94,6 +94,8 @@
       height: 18rem;
 
       p {
+        font-size: $font-size-sm;
+
         &:not(:last-child) {
           margin-bottom: 1rem;
         }
