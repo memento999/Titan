@@ -27,16 +27,15 @@
 
       &:after {
         content: '';
-        background: url(../assets/img/cheveron-right.svg) no-repeat center;
-        height: 11px;
-        width: 7px;
-        position: absolute;
-        right: 0;
-        top: 0;
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiB2aWV3Qm94PSIwIDAgMjAgMjAiPjx0aXRsZT5jaGV2ZXJvbi1yaWdodDwvdGl0bGU+PHBhdGggZmlsbD0iI2QwZDBkMCIgZD0iTTEyLjk1IDEwLjcwN2wwLjcwNy0wLjcwNy01LjY1Ny01LjY1Ny0xLjQxNCAxLjQxNCA0LjI0MiA0LjI0My00LjI0MiA0LjI0MyAxLjQxNCAxLjQxNCA0Ljk1LTQuOTV6Ij48L3BhdGg+PC9zdmc+);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 10px;
+        height: 10px;
       }
 
       &:hover::after {
-        background: url(../../../assets/img/cheveron-right-2.svg) no-repeat center;
+        filter: invert(45%) sepia(64%) saturate(1663%) hue-rotate(336deg) brightness(102%) contrast(104%);
       }
     }
 

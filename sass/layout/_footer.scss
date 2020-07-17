@@ -14,13 +14,14 @@
     justify-content: space-between;
     align-items: center;
     height: 14rem;
+    border-bottom: 1px solid #f2f4f7;
 
     @include respond(phone) {
       justify-content: center;
     }
   }
 
-  &__logo {
+  &__logo-box {
     img {
       height: 6rem;
     }
@@ -31,9 +32,12 @@
   }
 
   &__nav {
+    flex: 0 0 75%;
     display: flex;
-    flex-wrap: nowrap;
-    text-align: center;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 5rem;
 
     @include respond(phone) {
       display: none;
@@ -46,6 +50,7 @@
     text-decoration: none;
     line-height: 1.8;
     transition: all .1s ease-out;
+    white-space: nowrap; // prevent word wrap
 
     &:not(:last-child) {
       margin-right: 2.4rem;
@@ -57,15 +62,24 @@
   }
 
   &__socials {
+    flex: 0 0 7.960199005%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     &-link {
       display: inline-block;
 
       svg {
-        width: 18px;
-        height: 18px;
+        width: 1.8rem;
+        height: 1.8rem;
 
-        &:hover {
+        @include respond(phone) {
+          width: 3.6rem;
+          height: 3.6rem;
+        }
+
+        &:hover path {
           fill: $primary-color;
         }
       }
@@ -94,11 +108,11 @@
       height: 18rem;
 
       p {
-        font-size: $font-size-sm;
+        font-size: 2.4rem;
+      }
 
-        &:not(:last-child) {
-          margin-bottom: 1rem;
-        }
+      p:not(:last-child) {
+        margin-bottom: 1rem;
       }
     }
   }
