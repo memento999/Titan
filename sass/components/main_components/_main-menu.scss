@@ -6,7 +6,7 @@
   background-color: $color-white;
   font-size: 1.4rem;
 
-  @include respond(phone) {
+  @include respond(phone-land) {
     display: none;
   }
 

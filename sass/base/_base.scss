@@ -19,14 +19,18 @@ html {
   font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
 
   @include respond(tab-land) {
-    font-size: 43.75%; //1rem = 7px, 7/16 = 43.75%
+    font-size: 50%; //1rem = 8px, 8/16 = 50%
   }
 
   @include respond(tab-port) {
+    font-size: 43.75%; //1rem = 7px, 7/16 = 43.75%
+  }
+
+  @include respond(phone-land) {
     font-size: 37.5%; //1rem = 6px, 6/16 = 37.5%
   }
 
-  @include respond(phone) {
+  @include respond(phone-port) {
     font-size: 31.25%; //1rem = 5px, 5/16 = 31.25%
   }
 

@@ -2,12 +2,12 @@
   display: none;
   // position: fixed;
 
-  @include respond(phone) {
+  @include respond(phone-land) {
     display: block;
   }
 
   width: 100%;
-  max-width: 600px;
+  max-width: 768px;
   height: 20rem; // 2x size
 
   &__wrapper {

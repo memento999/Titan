@@ -14,10 +14,7 @@ var swiper = new Swiper(".top-products__swiper", {
     480: {
       slidesPerView: 4,
     },
-    700: {
-      slidesPerView: 5,
-    },
-    900: {
+    1366: {
       slidesPerView: 5,
     },
   },

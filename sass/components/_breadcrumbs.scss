@@ -20,7 +20,7 @@
   &__link {
     font-size: $font-size-md;
 
-    @include respond(phone) {
+    @include respond(phone-port) {
       font-size: 12px;
     }
 

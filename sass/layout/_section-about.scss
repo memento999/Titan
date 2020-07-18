@@ -14,7 +14,7 @@
       height: auto;
     }
 
-    @include respond(phone) {
+    @include respond(phone-land) {
       display: none;
     }
   }
@@ -23,7 +23,7 @@
     flex: 0 0 42.89897511%;
     margin-right: 8.1rem;
 
-    @include respond(phone) {
+    @include respond(phone-land) {
       flex: 0 0 88.140556369%;
       margin: 0 auto;
 

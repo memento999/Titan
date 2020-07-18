@@ -1,13 +1,6 @@
 .products {
   &__header {
     padding: 3.9rem 0 0 3rem;
-
-    &-title {
-      @include respond(phone) {
-        font-size: 18px;
-        line-height: 1.5;
-      }
-    }
   }
 
   .breadcrumbs {

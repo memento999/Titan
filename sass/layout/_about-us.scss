@@ -1,0 +1,50 @@
+.about-us {
+  position: relative;
+
+  &__header {
+    padding: 4rem 0 0 3rem;
+  }
+
+  .breadcrumbs {
+    margin: .7rem 0 0 3rem;
+  }
+
+  &__img {
+    background-image: url("../assets/img/Rectangle_294.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    z-index: 1;
+    height: 100%;
+    max-height: 35rem;
+    width: 49.1708126036%;
+
+    @include respond(phone-land) {
+      position: sticky;
+      width: 100%;
+      margin: 5.8rem 0 6.4rem 0;
+      height: 30rem;
+    }
+  }
+
+  &__caption {
+    max-width: 67%;
+    margin: 3rem 0 0 10rem;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: white;
+    padding: 2rem 2rem 6.9rem 0;
+
+    @include respond(phone-land) {
+      max-width: 100%;
+      position: sticky;
+      margin: 0;
+      padding: 0;
+      border-radius: 0;
+    }
+  }
+}

@@ -3,7 +3,7 @@
     width: 88.140556369%;
     margin: 0 auto;
 
-    @include respond(phone) {
+    @include respond(phone-land) {
       display: flex;
       flex-direction: column-reverse;
     }
@@ -16,7 +16,7 @@
     height: 14rem;
     border-bottom: 1px solid #f2f4f7;
 
-    @include respond(phone) {
+    @include respond(phone-land) {
       justify-content: center;
     }
   }
@@ -26,7 +26,7 @@
       height: 6rem;
     }
 
-    @include respond(phone) {
+    @include respond(phone-land) {
       display: none;
     }
   }
@@ -39,7 +39,7 @@
     flex-wrap: wrap;
     margin-left: 5rem;
 
-    @include respond(phone) {
+    @include respond(phone-land) {
       display: none;
     }
   }
@@ -74,7 +74,7 @@
         width: 1.8rem;
         height: 1.8rem;
 
-        @include respond(phone) {
+        @include respond(phone-land) {
           width: 3.6rem;
           height: 3.6rem;
         }
@@ -101,7 +101,7 @@
       color: $primary-color;
     }
 
-    @include respond(phone) {
+    @include respond(phone-land) {
       flex-direction: column;
       align-items: center;
       justify-content: center;

@@ -1,13 +1,15 @@
 /*
-  0 - 600px: Phone
-  600 - 900px: Tablet portrait
+  0 - 600px: Phone portrait
+  600 - 768px: Phone lanscape
+  768 - 900px: Tablet portrait
   900 - 1200px: Tablet lanscape
   [1200 - 1800] is where our normal styles apply
   1800px + : Big desktop
 
   
 $breakpoint argument choices:
-- phone
+- phone-port
+- phone-land
 - tab-port
 - tab-land
 - big-desktop
@@ -31,8 +33,11 @@ html {
   font-size: 62.5%; }
   @media (max-width: 75em) {
     html {
-      font-size: 43.75%; } }
+      font-size: 50%; } }
   @media (max-width: 56.25em) {
+    html {
+      font-size: 43.75%; } }
+  @media (max-width: 48em) {
     html {
       font-size: 37.5%; } }
   @media (max-width: 37.5em) {
@@ -81,6 +86,10 @@ body {
   font-weight: 400;
   line-height: 1.333;
   letter-spacing: 0; }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 18px;
+      line-height: 1.5; } }
 
 .heading-tertiary {
   color: #000;
@@ -95,6 +104,9 @@ body {
   font-weight: 400;
   line-height: 1.5715;
   letter-spacing: 0; }
+  @media (max-width: 37.5em) {
+    .paragraph {
+      font-size: 2.4rem; } }
 
 .u-center-text {
   text-align: center; }
@@ -218,7 +230,7 @@ body {
   border-radius: 1.2rem;
   background-color: #fff;
   font-size: 1.4rem; }
-  @media (max-width: 37.5em) {
+  @media (max-width: 48em) {
     .main__menu {
       display: none; } }
   .main__menu-layout {
@@ -253,13 +265,14 @@ body {
   margin-right: 8rem;
   border-radius: 1.2rem;
   overflow: hidden; }
-  @media (max-width: 37.5em) {
+  @media (max-width: 48em) {
     .main__swiper {
       flex: 0 0 92%;
       margin: 0 auto;
       height: 39.8rem; } }
   .main__swiper--slide {
     text-align: center;
+    width: 100%;
     width: 100%; }
     .main__swiper--slide img {
       width: 100%;
@@ -271,7 +284,7 @@ body {
   --swiper-theme-color: black;
   --swiper-navigation-size: 1.2rem; }
 
-@media (max-width: 37.5em) {
+@media (max-width: 48em) {
   .main__swiper--button-next,
   .main__swiper--button-prev {
     display: none; } }
@@ -297,7 +310,7 @@ body {
   .swiper-pagination-bullet-active {
     background-color: #ff613b; }
 
-@media screen and (min-width: 37.5625em) {
+@media screen and (min-width: 48em) {
   .swiper-pagination {
     display: none; } }
 
@@ -326,7 +339,7 @@ body {
 
 .top-products__swiper-wrapper {
   padding: 14.4rem 3rem 4rem 3rem; }
-  @media (max-width: 37.5em) {
+  @media (max-width: 48em) {
     .top-products__swiper-wrapper {
       padding-left: 0;
       padding-right: 0; } }
@@ -447,7 +460,7 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: #fff; }
-  @media (max-width: 37.5em) {
+  @media (max-width: 48em) {
     .header {
       display: none; } }
 
@@ -463,13 +476,13 @@ body {
     .section-about__logo img {
       width: 100%;
       height: auto; }
-    @media (max-width: 37.5em) {
+    @media (max-width: 48em) {
       .section-about__logo {
         display: none; } }
   .section-about__caption {
     flex: 0 0 42.89897511%;
     margin-right: 8.1rem; }
-    @media (max-width: 37.5em) {
+    @media (max-width: 48em) {
       .section-about__caption {
         flex: 0 0 88.140556369%;
         margin: 0 auto; }
@@ -479,7 +492,7 @@ body {
 .footer__wrapper {
   width: 88.140556369%;
   margin: 0 auto; }
-  @media (max-width: 37.5em) {
+  @media (max-width: 48em) {
     .footer__wrapper {
       display: flex;
       flex-direction: column-reverse; } }
@@ -490,14 +503,14 @@ body {
   align-items: center;
   height: 14rem;
   border-bottom: 1px solid #f2f4f7; }
-  @media (max-width: 37.5em) {
+  @media (max-width: 48em) {
     .footer__top {
       justify-content: center; } }
 
 .footer__logo-box img {
   height: 6rem; }
 
-@media (max-width: 37.5em) {
+@media (max-width: 48em) {
   .footer__logo-box {
     display: none; } }
 
@@ -508,7 +521,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   margin-left: 5rem; }
-  @media (max-width: 37.5em) {
+  @media (max-width: 48em) {
     .footer__nav {
       display: none; } }
 
@@ -534,7 +547,7 @@ body {
     .footer__socials-link svg {
       width: 1.8rem;
       height: 1.8rem; }
-      @media (max-width: 37.5em) {
+      @media (max-width: 48em) {
         .footer__socials-link svg {
           width: 3.6rem;
           height: 3.6rem; } }
@@ -551,7 +564,7 @@ body {
   border-bottom: 1px solid #f2f4f7; }
   .footer__bottom span {
     color: #ff613b; }
-  @media (max-width: 37.5em) {
+  @media (max-width: 48em) {
     .footer__bottom {
       flex-direction: column;
       align-items: center;
@@ -565,9 +578,9 @@ body {
 .menu {
   display: none;
   width: 100%;
-  max-width: 600px;
+  max-width: 768px;
   height: 20rem; }
-  @media (max-width: 37.5em) {
+  @media (max-width: 48em) {
     .menu {
       display: block; } }
   .menu__wrapper {
@@ -601,10 +614,6 @@ body {
 
 .products__header {
   padding: 3.9rem 0 0 3rem; }
-  @media (max-width: 37.5em) {
-    .products__header-title {
-      font-size: 18px;
-      line-height: 1.5; } }
 
 .products .breadcrumbs {
   margin: .7rem 0 3.4rem 3rem; }
@@ -619,15 +628,52 @@ body {
   .products__layout-unit {
     margin-bottom: 3.2rem; }
 
+.about-us {
+  position: relative; }
+  .about-us__header {
+    padding: 4rem 0 0 3rem; }
+  .about-us .breadcrumbs {
+    margin: .7rem 0 0 3rem; }
+  .about-us__img {
+    background-image: url("../assets/img/Rectangle_294.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    z-index: 1;
+    height: 100%;
+    max-height: 35rem;
+    width: 49.1708126036%; }
+    @media (max-width: 48em) {
+      .about-us__img {
+        position: sticky;
+        width: 100%;
+        margin: 5.8rem 0 6.4rem 0;
+        height: 30rem; } }
+  .about-us__caption {
+    max-width: 67%;
+    margin: 3rem 0 0 10rem;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: white;
+    padding: 2rem 2rem 6.9rem 0; }
+    @media (max-width: 48em) {
+      .about-us__caption {
+        max-width: 100%;
+        position: sticky;
+        margin: 0;
+        padding: 0;
+        border-radius: 0; } }
+
 body {
   background-color: #fafafa; }
   body .main {
     display: flex;
     padding-top: 5.1rem;
     background-color: #fafafa; }
-    @media (max-width: 37.5em) {
-      body .main {
-        padding-top: 6rem; } }
   body .top-products {
     max-width: 88.140556369%;
     margin: 9rem auto 0; }
@@ -643,3 +689,11 @@ body {
   max-width: 88.140556369%;
   margin: 2.5rem auto 9.1rem auto;
   background-color: #fff; }
+
+.about-us {
+  max-width: 88.140556369%;
+  margin: 2.5rem auto 9.1rem auto;
+  background-color: #fff; }
+  @media (max-width: 48em) {
+    .about-us {
+      margin-top: 6rem; } }

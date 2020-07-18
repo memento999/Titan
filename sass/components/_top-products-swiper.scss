@@ -31,7 +31,7 @@
   &__swiper-wrapper {
     padding: 14.4rem 3rem 4rem 3rem;
 
-    @include respond(phone) {
+    @include respond(phone-land) {
       padding-left: 0;
       padding-right: 0;
     }
