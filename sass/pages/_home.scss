@@ -2,6 +2,29 @@ body {
   // general
   background-color: $color-very-light-grey;
 
+  // main section
+  .main {
+    display: flex;
+    padding-top: 5.1rem;
+
+    background-color: #fafafa;
+
+    @include respond(phone) {
+      padding-top: 6rem;
+    }
+  }
+
+  // top products section
+  .top-products {
+    max-width: 88.140556369%;
+    margin: 9rem auto 0;
+
+    &__wrapper {
+      position: relative;
+      border-radius: 1rem;
+      overflow: hidden;
+    }
+  }
 
   // footer
   .footer {

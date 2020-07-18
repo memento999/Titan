@@ -6,6 +6,14 @@
   box-sizing: inherit;
 }
 
+a:any-link {
+  text-decoration: none; // no underline
+}
+
+ul {
+  list-style-type: none;
+}
+
 html {
   // this defines what 1rem is
   font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%

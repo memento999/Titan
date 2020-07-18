@@ -22,15 +22,16 @@
 // general components
 @import "components/card";
 @import "components/button";
+@import "components/breadcrumbs";
 
 
 // layouts
 @import "layout/header";
-@import "layout/main";
-@import "layout/top-products";
 @import "layout/section-about";
 @import "layout/footer";
 @import "layout/menu";
+@import "layout/products";
 
 // pages
 @import "pages/home";
+@import "pages/product-page";

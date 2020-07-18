@@ -21,7 +21,7 @@
 body {
   font-family: "BPG LE Studio 04 Caps";
   font-weight: 400;
-  line-height: 1.7;
+  line-height: normal;
 }
 
 // HEADER
@@ -29,7 +29,7 @@ body {
   font-size: $font-size-sm;
 
   &__menu-text {
-    line-height: 1.5;
+    line-height: 0.9375;
     color: $color-black;
   }
 }
@@ -38,6 +38,7 @@ body {
   color: $color-black;
   font-size: $font-size-massive;
   font-weight: 400;
+  line-height: 1.25;
   letter-spacing: 0;
 }
 
@@ -45,7 +46,7 @@ body {
   color: $color-black;
   font-size: $font-size-huge;
   font-weight: 400;
-  line-height: 3.2;
+  line-height: 1.333;
   letter-spacing: 0;
 }
 
@@ -53,7 +54,7 @@ body {
   color: $color-black;
   font-size: $font-size-big;
   font-weight: 400;
-  line-height: 2.7;
+  line-height: 1.5;
   letter-spacing: 0;
 }
 
@@ -61,4 +62,6 @@ body {
   font-size: $font-size-md;
   font-family: "Helvetica Neue LTGEOW 82-55 Rm";
   font-weight: 400;
+  line-height: 1.5715;
+  letter-spacing: 0;
 }
