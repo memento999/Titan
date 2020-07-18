@@ -4,9 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
   <link rel="stylesheet" href="./css/style.css">
-  <title>about us</title>
+  <title>rules</title>
 </head>
 
 <body>
@@ -17,7 +16,14 @@
     </div>
 
     <div class="header__menu">
-      <img class="header__menu-icon" src="./assets/img/icons8-menu.svg" alt="Burger Icon">
+      <a href='#' class="header__menu-icon">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <title>menu1</title>
+          <path fill="#d0d0d0"
+            d="M3 13h18c0.552 0 1-0.448 1-1s-0.448-1-1-1h-18c-0.552 0-1 0.448-1 1s0.448 1 1 1zM3 7h18c0.552 0 1-0.448 1-1s-0.448-1-1-1h-18c-0.552 0-1 0.448-1 1s0.448 1 1 1zM3 19h18c0.552 0 1-0.448 1-1s-0.448-1-1-1h-18c-0.552 0-1 0.448-1 1s0.448 1 1 1z">
+          </path>
+        </svg>
+      </a>
       <div class="header__menu-text">ყველა კატეგორია</div>
     </div>
 
@@ -43,9 +49,9 @@
   </header>
   <!-- end of header -->
 
-
-  <section class="about-us">
-    <div class="about-us__header">
+  <!-- Terms and Conditions -->
+  <section class="terms-conditions">
+    <div class="terms-conditions__header">
       <h2 class="heading-secondary">ჩვენს შესახებ</h2>
     </div>
     <ul class="breadcrumbs">
@@ -53,12 +59,10 @@
           მთავარი
         </a></li>
       <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link breadcrumbs__link--active">
-          ჩვენს შესახებ
+          წესები და პირობები
         </a></li>
     </ul>
-    <div class="about-us__img u-border-md"></div>
-
-    <p class="paragraph about-us__caption u-border-md">
+    <p class="paragraph terms-conditions__caption">
       საბეჭდი და ტიპოგრაფიული ინდუსტრიის უშინაარსო ტექსტია. იგი სტანდარტად 1500-იანი წლებიდან იქცა, როდესაც უცნობმა
       მბეჭდავმა ამწყობ დაზგაზე წიგნის საცდელი ეგზემპლარი დაბეჭდა. მისი ტექსტი არამარტო 5 საუკუნის მანძილზე შემორჩა,
       არამედ მან დღემდე, ელექტრონული ტიპოგრაფიის დრომდეც უცვლელად მოაღწია. განსაკუთრებული პოპულარობა მას 1960-იან წლებში
@@ -80,9 +84,9 @@
       წინადადებების ასაწყობად 200-მდე ლათინური სიტყვისგან შემდგარ ლექსიკონს იყენებს. შედეგად მიიღება ტექსტი, რომელიც
       ვიზუალურად მაქსიმალურად ახლოსაა რეალურთან. გენერირებული Lorem Ipsum არასოდეს არ არის გამეორებადი, შემთხვევითი
       სიტყვების ან ხუმრობების შემცველი.
+
     </p>
   </section>
-
 
   <!-- footer section -->
   <footer class="footer">
@@ -198,10 +202,6 @@
     </div>
   </div>
 
-  <!-- Swiper JS -->
-  <script src="./scripts/swiper-bundle.min.js"></script>
-  <script src="./scripts/swipers/main-swiper.js"></script>
-  <script src="./scripts/swipers/top-products-swiper.js"></script>
 </body>
 
 </html>

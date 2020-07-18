@@ -9,7 +9,10 @@
     width: 2.2rem;
     height: 2.2rem;
     margin-right: 1rem;
-    cursor: pointer;
+
+    svg path {
+      fill: #171717;
+    }
   }
 
   &-text {
