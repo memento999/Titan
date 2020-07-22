@@ -2,23 +2,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  box-sizing: border-box;
   width: 19.6rem;
   height: 5rem;
-  border-radius: 13px;
+  border-radius: 1rem;
+  font-size: $font-size-sm;
   background-color: $primary-color;
-  text-decoration: none;
+  color: $color-white;
 
   &__icon {
     margin-left: 2rem;
-    width: 1.8rem;
-    height: 1.8rem;
+    width: 2.2rem;
+    height: 2.2rem;
   }
 
   &__caption {
     margin-right: 2rem;
-    font-size: $font-size-sm;
-    line-height: 4;
-    color: $color-white;
+    line-height: 1.25;
   }
 }

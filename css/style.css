@@ -362,18 +362,15 @@ body {
     content: ''; }
 
 .card {
-  width: 23.6rem;
-  transition: all .01s ease;
+  width: 21.4rem;
+  transition: 200ms;
   border: 1px solid transparent;
   background-color: #fff; }
   .card:hover {
     border-radius: 1rem;
-    border: 1px solid #E2E7ED;
-    transform: scale(1.01);
-    backface-visibility: hidden; }
+    border: 1px solid #E2E7ED; }
   .card__image {
     position: relative;
-    margin: 1rem;
     height: 21.6rem; }
     .card__image img {
       position: absolute;
@@ -382,55 +379,47 @@ body {
       width: 100%;
       height: auto; }
   .card__details {
-    margin: .7rem 2rem 3.1rem 2rem;
-    height: 6.6rem; }
-  .card__title, .card__id {
+    margin: 1.6rem 1rem 3.1rem 1rem; }
+  .card__title {
     font-family: "Helvetica Neue LTGEOW 82-55 Rm";
-    font-size: 1.6rem;
-    color: #171717; }
-    .card__title span, .card__id span {
-      font-size: 1.8rem; }
+    font-size: 1.8rem;
+    color: #171717;
+    line-height: 2.556;
+    margin-bottom: 1.5rem; }
   .card__price {
-    display: flex;
-    justify-content: flex-start;
-    text-align: center;
-    margin-top: 1.6rem;
-    position: relative; }
+    display: flex; }
     .card__price-real {
       margin-right: 1.4rem;
       font-family: "Helvetica Neue LTGEOW 82-75 Bd";
       font-size: 1.8rem;
       color: #ff613b; }
     .card__price-sale {
+      margin-top: .2rem;
       font-family: "Helvetica Neue LTGEOW 82-55 Rm";
       font-size: 1.4rem;
       color: #000;
-      text-decoration: line-through;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%); }
+      text-decoration: line-through; }
   .card__btn--1 {
-    margin: 6.16rem 2rem 1rem 2rem; }
+    margin: 0 auto; }
 
 .btn {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
   width: 19.6rem;
   height: 5rem;
-  border-radius: 13px;
+  border-radius: 1rem;
+  font-size: 1.2rem;
   background-color: #ff613b;
-  text-decoration: none; }
+  color: #fff; }
   .btn__icon {
     margin-left: 2rem;
-    width: 1.8rem;
-    height: 1.8rem; }
+    width: 2.2rem;
+    height: 2.2rem; }
   .btn__caption {
     margin-right: 2rem;
-    font-size: 1.2rem;
-    line-height: 4;
-    color: #fff; }
+    line-height: 1.25; }
 
 .breadcrumbs {
   font-family: "Helvetica Neue LTGEOW 82-75 Bd"; }
