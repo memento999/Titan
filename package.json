@@ -13,11 +13,10 @@
     "build:css": "npm-run-all compile:sass prefix:css compress:css"
   },
   "author": "Jano",
-  "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^7.1.4",
     "node-sass": "^4.5.3",
     "npm-run-all": "^4.1.1",
-    "postcss-cli": "^4.1.1"
+    "postcss-cli": "^7.1.1"
   }
 }
