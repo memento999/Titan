@@ -1,12 +1,22 @@
 .about-us {
-  position: relative;
-
   &__header {
-    padding: 4rem 0 0 3rem;
+    margin: 4rem 0 0 3rem;
+
+    @include respond(phone-land) {
+      width: 100%;
+      max-width: 88.21376281112738%;
+      margin: 4rem auto 0 auto;
+    }
   }
 
   .breadcrumbs {
     margin: .7rem 0 0 3rem;
+
+    @include respond(phone-land) {
+      width: 100%;
+      max-width: 88.21376281112738%;
+      margin: .7rem auto 0 auto;
+    }
   }
 
   &__img {
@@ -20,29 +30,31 @@
     height: 100%;
     max-height: 35rem;
     width: 49.1708126036%;
+    border-radius: 1rem;
 
     @include respond(phone-land) {
       position: sticky;
       width: 100%;
-      margin: 5.8rem 0 6.4rem 0;
+      max-width: 88.21376281112738%;
+      margin: 5.8rem auto 6.4rem auto;
       height: 30rem;
     }
   }
 
   &__caption {
-    max-width: 67%;
-    margin: 3rem 0 0 10rem;
     position: relative;
     top: 0;
     left: 0;
     z-index: 2;
     background-color: white;
-    padding: 2rem 2rem 6.9rem 0;
+    padding: 2rem 2rem 0 0;
+    margin: 3rem 0 4rem 10rem;
+    max-width: 67%;
+    border-radius: 1rem;
 
     @include respond(phone-land) {
-      max-width: 100%;
-      position: sticky;
-      margin: 0;
+      max-width: 88.21376281112738%;
+      margin: 0 auto 6rem auto;
       padding: 0;
       border-radius: 0;
     }

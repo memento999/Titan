@@ -1,0 +1,14 @@
+// Header Dropdown
+@keyframes header-dropdown {
+    0% {
+        transform: translateY(-3rem);
+    }
+
+    80% {
+        transform: translateY(1rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

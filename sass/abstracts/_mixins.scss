@@ -23,6 +23,10 @@
   height: auto;
 }
 
+@mixin hoverOnLink {
+  transition: all .1s ease;
+}
+
 // MEDIA QUERY MANAGER
 
 /*

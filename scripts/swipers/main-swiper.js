@@ -1,5 +1,4 @@
 // Initialize Swiper
-
 var swiper = new Swiper(".main__swiper", {
   slidesPerView: 1,
   navigation: {

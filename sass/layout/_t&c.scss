@@ -1,10 +1,22 @@
 .terms-conditions {
   &__header {
-    padding: 4rem 0 0 3rem;
+    margin: 4rem 0 0 3rem;
+
+    @include respond(phone-land) {
+      width: 100%;
+      max-width: 88.21376281112738%;
+      margin: 4rem auto 0 auto;
+    }
   }
 
   .breadcrumbs {
     margin: .7rem 0 0 3rem;
+
+    @include respond(phone-land) {
+      width: 100%;
+      max-width: 88.21376281112738%;
+      margin: .7rem auto 0 auto;
+    }
   }
 
   &__caption {
@@ -14,6 +26,7 @@
 
     @include respond(phone-land) {
       max-width: 100%;
+      max-width: 88.21376281112738%;
     }
   }
 }

@@ -1,10 +1,13 @@
 .about-us {
-  max-width: 88.140556369%;
-  margin: 2.5rem auto 9.1rem auto;
+  position: relative;
+  max-width: 88.21376281112738%;
+  margin: 2.5rem auto 9rem auto;
+  display: flow-root;
 
   background-color: $color-white;
 
   @include respond(phone-land) {
     margin-top: 6rem;
+    max-width: 100%;
   }
 }

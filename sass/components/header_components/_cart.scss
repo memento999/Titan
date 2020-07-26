@@ -1,45 +1,33 @@
 .cart {
-  // structure
   flex: 0 0 8.345534407%;
-
   display: flex;
   justify-content: center;
   align-items: center;
   height: 5rem;
-  border-radius: 1.1rem;
+  border-radius: 1rem;
   cursor: pointer;
+  background-color: $primary-color;
 
   &> :not(:last-child) {
     margin-right: 1.5rem;
   }
 
-  // skin
-  background-color: $primary-color;
-
   &__icon {
-    // structure
     width: 1.8rem;
     height: 1.8rem;
   }
 
-  &__item-count {
-    // structure
+  &__items {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 50%;
     width: 2.2rem;
     height: 2.2rem;
-
-    // skin
+    font-family: "Helvetica Neue LTGEOW 82-75 Bd";
+    font-size: $font-size-md;
     background-color: $color-white;
-
-    &>* {
-      // structure
-      @include absCenter;
-
-      // skin
-      color: $primary-color;
-      font-family: "Helvetica Neue LTGEOW 82-75 Bd";
-      font-size: $font-size-md;
-    }
+    color: $primary-color;
   }
 }

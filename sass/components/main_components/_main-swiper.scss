@@ -4,7 +4,7 @@
   border-radius: 1.2rem;
   overflow: hidden;
 
-  @include respond(phone-land) {
+  @include respond(tab-port) {
     flex: 0 0 92%;
     margin: 0 auto;
     height: 39.8rem;
@@ -33,7 +33,7 @@
 
 .main__swiper--button-next,
 .main__swiper--button-prev {
-  @include respond(phone-land) {
+  @include respond(tab-port) {
     display: none;
   }
 }
@@ -67,9 +67,8 @@
   }
 }
 
-@media screen and (min-width: 48em) {
+@media screen and (min-width: 56.25em) {
 
-  // 601px
   .swiper-pagination {
     display: none;
   }

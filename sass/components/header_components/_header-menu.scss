@@ -1,22 +1,72 @@
 // header menu
 .header__menu {
-  flex: 0 0 12.1522694%;
-
   display: flex;
   align-items: center;
 
-  &-icon {
-    width: 2.2rem;
-    height: 2.2rem;
+  &-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
     margin-right: 1rem;
+    width: 22px;
+    height: 18px;
+    cursor: pointer;
+  }
 
-    svg path {
-      fill: #171717;
+  &-burger {
+    width: 18px;
+    height: 2px;
+    background: $color-very-dark-grey;
+    border-radius: 3px;
+    transition: all .5s ease-in-out;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 18px;
+      height: inherit;
+      background: $color-black;
+      border-radius: 3px;
+      transition: all .5s ease-in-out;
+    }
+
+    &::before {
+      transform: translateY(-7px);
+    }
+
+    &::after {
+      transform: translateY(7px);
     }
   }
 
-  &-text {
-    float: right;
-    white-space: nowrap;
+  &-btn.open &-burger {
+    transform: translateX(-10px);
+    background: transparent;
   }
+
+  &-btn.open &-burger::before {
+    transform: rotate(45deg) translate(5px, -5px);
+  }
+
+  &-btn.open &-burger::after {
+    transform: rotate(-45deg) translate(5px, 5px);
+  }
+
+  &-text {
+    white-space: nowrap;
+    margin-top: .3rem;
+  }
+}
+
+// body overlay on button click
+.overlay::before {
+  content: '';
+  position: fixed;
+  z-index: 98;
+  width: 100%;
+  height: 100%;
+  background-color: $color-black;
+  opacity: .3;
 }

@@ -1,10 +1,15 @@
 .header {
-  height: 11rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  height: 11rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 99;
   background-color: $color-white;
+  box-shadow: 0 1px 3px -2px gray;
+  transition: all 0.4s ease-in-out; // Add a transition effect (when scrolling) 
 
   @include respond(phone-land) {
     display: none;

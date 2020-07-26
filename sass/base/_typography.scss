@@ -18,12 +18,6 @@
 //   src: url(sansation_light.woff);
 // }
 
-body {
-  font-family: "BPG LE Studio 04 Caps";
-  font-weight: 400;
-  line-height: normal;
-}
-
 // HEADER
 .header {
   font-size: $font-size-sm;
@@ -49,9 +43,14 @@ body {
   line-height: 1.333;
   letter-spacing: 0;
 
+  @include respond(phone-land) {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
   @include respond(phone-port) {
     font-size: 18px;
-    line-height: 1.5;
+    line-height: 1.8;
   }
 }
 
@@ -70,7 +69,11 @@ body {
   line-height: 1.5715;
   letter-spacing: 0;
 
+  @include respond(phone-land) {
+    font-size: 15px;
+  }
+
   @include respond(phone-port) {
-    font-size: $font-size-huge;
+    font-size: 14px;
   }
 }

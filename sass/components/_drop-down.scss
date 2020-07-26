@@ -1,0 +1,77 @@
+.drop-down {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    padding-bottom: 3.9rem;
+    border-top: 2px solid $color-very-light-grey;
+    background-color: $color-white;
+
+    // header dropdown animation
+    animation-name: header-dropdown;
+    animation-duration: .6s;
+    animation-timing-function: ease-out;
+
+    @include respond(phone-land) {
+        display: none;
+    }
+
+    &__wrapper {
+        margin-left: 7.9rem;
+    }
+
+    &__top {
+        padding: 3.6rem 0 4.2rem 0;
+    }
+
+    .drop-down__top-menu {
+        &>:not(:last-child) {
+            margin-right: 4rem;
+        }
+    }
+
+    &__link {
+        font-size: $font-size-md;
+        line-height: 1.345;
+        width: max-content;
+        color: $color-black;
+        @include hoverOnLink;
+
+        &:hover,
+        &:active {
+            color: $primary-color;
+        }
+    }
+
+    &__bottom-menu {
+        display: flex;
+        flex-direction: column;
+
+        &>a {
+            width: 22.6rem;
+            position: relative;
+        }
+
+        &> :not(:last-child) {
+            margin-bottom: 1.1rem;
+        }
+
+        &>::after {
+            content: '';
+            background-image: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ctitle%3Echeveron-right%3C/title%3E%3Cpath fill='%23d0d0d0' d='M12.95 10.707l0.707-0.707-5.657-5.657-1.414 1.414 4.242 4.243-4.242 4.243 1.414 1.414 4.95-4.95z'%3E%3C/path%3E%3C/svg%3E%0A");
+            background-repeat: no-repeat;
+            background-position: center;
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        &>:hover::after {
+            filter: invert(45%) sepia(64%) saturate(1663%) hue-rotate(336deg) brightness(102%) contrast(104%);
+        }
+
+    }
+}

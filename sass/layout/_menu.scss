@@ -1,6 +1,5 @@
 .menu {
   display: none;
-  // position: fixed;
 
   @include respond(phone-land) {
     display: block;

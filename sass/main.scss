@@ -4,16 +4,17 @@
 
 // base
 @import "base/base";
-// @import "base/animation";
+@import "base/animation";
 @import "base/typography";
 @import "base/utilities";
 
 // header components
 @import "components/header_components/logo";
 @import "components/header_components/header-menu";
-@import "components/header_components/search";
+@import "components/header_components/form";
 @import "components/header_components/cart";
 @import "components/header_components/auth";
+@import "components/drop-down";
 // main components
 @import "components/main_components/main-menu";
 @import "components/main_components/main-swiper";

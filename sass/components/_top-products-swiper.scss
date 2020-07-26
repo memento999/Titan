@@ -6,18 +6,19 @@
     z-index: 2; //overlay swiper
   }
 
-  &__title {
-    margin-bottom: .7rem;
-    font-size: 2.4rem;
-    line-height: 2;
-    color: $color-black;
-  }
-
   &__link {
     a {
       text-decoration: none;
       font-size: $font-size-md;
       color: $primary-color;
+
+      @include respond(phone-port) {
+        font-size: 12px;
+      }
+
+      @include respond(phone-land) {
+        font-size: 12px;
+      }
     }
   }
 
@@ -35,13 +36,19 @@
       padding-left: 0;
       padding-right: 0;
     }
+
+    @include respond(tab-port) {
+      padding-top: 17.4rem;
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 
   &__slider-arrows {
     position: absolute;
     top: 5.6rem;
     right: 3.6rem;
-    width: 8.7rem;
+    width: 87px;
     height: 2.2rem;
     display: flex;
     justify-content: space-between;
@@ -49,8 +56,8 @@
 
   &__button-next,
   &__button-prev {
-    width: 1.8rem;
-    height: 1.8rem;
+    width: 22px;
+    height: 22px;
     cursor: pointer;
 
     &::after {
