@@ -1,10 +1,19 @@
 .products {
   &__header {
     padding: 3.9rem 0 0 3rem;
+
+    @include respond(phone-land) {
+      padding: 0;
+    }
   }
 
   .breadcrumbs {
-    margin: .7rem 0 3.4rem 3rem;
+    margin: 7px 0 3.4rem 3rem;
+
+    @include respond(phone-land) {
+      margin-left: 0;
+      margin-bottom: 30px;
+    }
   }
 
   &__layout {
@@ -12,11 +21,9 @@
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    list-style-type: none;
-    padding: .5rem;
 
-    &-unit {
-      margin-bottom: 3.2rem;
+    &-unit:not(:last-child) {
+      margin-bottom: 20px;
     }
   }
 }

@@ -469,7 +469,7 @@ body {
     height: 100%;
     transform: scale(1.05);
     z-index: -1;
-    border-radius: 1rem;
+    border-radius: 10px;
     border: 1px solid #E2E7ED; }
   .card__image {
     position: relative;
@@ -632,7 +632,7 @@ body {
   font-size: 1.4rem;
   color: #000;
   text-decoration: none;
-  line-height: 1.8;
+  line-height: 1.3;
   transition: all .1s ease-out;
   white-space: nowrap; }
   .footer__links:not(:last-child) {
@@ -646,18 +646,16 @@ body {
   justify-content: space-between;
   align-items: center; }
   .footer__socials-link {
-    display: inline-block; }
+    display: inline-block;
+    height: 22px;
+    width: 22px; }
     .footer__socials-link svg {
-      width: 1.8rem;
-      height: 1.8rem; }
-      @media (max-width: 48em) {
-        .footer__socials-link svg {
-          width: 3.6rem;
-          height: 3.6rem; } }
+      width: 18px;
+      height: 18px; }
       .footer__socials-link svg:hover path {
         fill: #ff613b; }
     .footer__socials-link:not(:last-child) {
-      margin-right: 1.7rem; }
+      margin-right: 17px; }
 
 .footer__bottom {
   display: flex;
@@ -717,19 +715,24 @@ body {
 
 .products__header {
   padding: 3.9rem 0 0 3rem; }
+  @media (max-width: 48em) {
+    .products__header {
+      padding: 0; } }
 
 .products .breadcrumbs {
-  margin: .7rem 0 3.4rem 3rem; }
+  margin: 7px 0 3.4rem 3rem; }
+  @media (max-width: 48em) {
+    .products .breadcrumbs {
+      margin-left: 0;
+      margin-bottom: 30px; } }
 
 .products__layout {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap;
-  list-style-type: none;
-  padding: .5rem; }
-  .products__layout-unit {
-    margin-bottom: 3.2rem; }
+  flex-wrap: wrap; }
+  .products__layout-unit:not(:last-child) {
+    margin-bottom: 20px; }
 
 .about-us__header {
   margin: 4rem 0 0 3rem; }
@@ -825,7 +828,9 @@ body {
   background-color: #fff; }
   @media (max-width: 48em) {
     .products {
-      margin-top: 6rem; } }
+      max-width: 100%;
+      margin: 0 0 30px 0;
+      padding: 25px 17px 0 17px; } }
 
 .about-us {
   position: relative;
@@ -842,7 +847,8 @@ body {
   display: flow-root;
   max-width: 88.140556369%;
   margin: 2.5rem auto 9.1rem auto;
-  background-color: #fff; }
+  background-color: #fff;
+  border-radius: 10px; }
   @media (max-width: 48em) {
     .terms-conditions {
       margin-top: 6rem;
