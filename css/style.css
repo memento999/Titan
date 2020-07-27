@@ -410,68 +410,71 @@ body {
   .swiper-pagination {
     display: none; } }
 
-.top-products__header {
-  position: absolute;
-  top: 3.9rem;
-  left: 3rem;
-  z-index: 2; }
-
-.top-products__link a {
-  text-decoration: none;
-  font-size: 1.4rem;
-  color: #ff613b; }
-  @media (max-width: 37.5em) {
+.top-products {
+  max-width: 88.140556369%;
+  position: relative;
+  overflow: hidden;
+  margin: 9rem auto 0;
+  background-color: #fff; }
+  .top-products__header {
+    margin: 3.2rem 0 0 3rem; }
+  .top-products__link {
+    margin: 1.2rem 0 3.9rem 0; }
     .top-products__link a {
-      font-size: 12px; } }
-  @media (max-width: 48em) {
-    .top-products__link a {
-      font-size: 12px; } }
-
-.top-products__swiper {
-  width: 100%;
-  background-color: #fff;
-  margin: 0;
-  position: relative; }
-
-.top-products__swiper-wrapper {
-  padding: 14.4rem 3rem 4rem 3rem; }
-  @media (max-width: 48em) {
-    .top-products__swiper-wrapper {
-      padding-left: 0;
-      padding-right: 0; } }
-  @media (max-width: 56.25em) {
-    .top-products__swiper-wrapper {
-      padding-top: 17.4rem;
-      padding-left: 0;
-      padding-right: 0; } }
-
-.top-products__slider-arrows {
-  position: absolute;
-  top: 5.6rem;
-  right: 3.6rem;
-  width: 87px;
-  height: 2.2rem;
-  display: flex;
-  justify-content: space-between; }
-
-.top-products__button-next, .top-products__button-prev {
-  width: 22px;
-  height: 22px;
-  cursor: pointer; }
-  .top-products__button-next::after, .top-products__button-prev::after {
-    content: ''; }
+      text-decoration: none;
+      font-size: 1.4rem;
+      color: #ff613b; }
+      @media (max-width: 37.5em) {
+        .top-products__link a {
+          font-size: 12px; } }
+      @media (max-width: 48em) {
+        .top-products__link a {
+          font-size: 12px; } }
+  .top-products__swiper {
+    background-color: #fff;
+    padding: 2rem 3rem 4rem 3rem; }
+  .top-products__slide {
+    width: auto; }
+  .top-products__slider-arrows {
+    position: absolute;
+    top: 5.6rem;
+    right: 3.6rem;
+    width: 87px;
+    height: 2.2rem;
+    display: flex;
+    justify-content: space-between; }
+  .top-products__button-next, .top-products__button-prev {
+    width: 18px;
+    height: 18px;
+    cursor: pointer; }
+    .top-products__button-next::after, .top-products__button-prev::after {
+      content: ''; }
 
 .card {
-  width: 21.4rem;
-  transition: 200ms;
+  width: max(21.4rem, 165px);
+  transition: all .3s ease-in-out;
   border: 1px solid transparent;
-  background-color: #fff; }
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+  font-size: 16px; }
   .card:hover {
+    transform: scale(1.05); }
+  .card:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(1.05);
+    z-index: -1;
     border-radius: 1rem;
     border: 1px solid #E2E7ED; }
   .card__image {
     position: relative;
-    height: 21.6rem; }
+    height: 21.6rem;
+    height: max(21.5rem, 165px); }
     .card__image img {
       position: absolute;
       left: 0;
@@ -482,7 +485,7 @@ body {
     margin: 1.6rem 1rem 3.1rem 1rem; }
   .card__title {
     font-family: "Helvetica Neue LTGEOW 82-55 Rm";
-    font-size: 1.8rem;
+    font-size: min(max(14px, calc(0.875em + ((1vw - 3.75px) * 0.4036))), 18px);
     color: #171717;
     line-height: 2.556;
     margin-bottom: 1.5rem; }
@@ -491,12 +494,13 @@ body {
     .card__price-real {
       margin-right: 1.4rem;
       font-family: "Helvetica Neue LTGEOW 82-75 Bd";
-      font-size: 1.8rem;
+      font-size: 18px;
+      line-height: 1.3333333;
       color: #ff613b; }
     .card__price-sale {
       margin-top: .2rem;
       font-family: "Helvetica Neue LTGEOW 82-55 Rm";
-      font-size: 1.4rem;
+      font-size: 14px;
       color: #000;
       text-decoration: line-through; }
   .card__btn--1 {
@@ -507,18 +511,18 @@ body {
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  width: 19.6rem;
-  height: 5rem;
-  border-radius: 1rem;
-  font-size: 1.2rem;
+  width: max(19.6rem, 165px);
+  height: max(5rem, 42px);
+  border-radius: 10px;
   background-color: #ff613b;
   color: #fff; }
   .btn__icon {
-    margin-left: 2rem;
-    width: 2.2rem;
-    height: 2.2rem; }
+    margin-left: 20px;
+    width: 22px;
+    height: 22px; }
   .btn__caption {
-    margin-right: 2rem;
+    margin-right: 34px;
+    font-size: 12px;
     line-height: 1.25; }
 
 .breadcrumbs {
@@ -811,21 +815,6 @@ body {
     display: flex;
     padding-top: 5.1rem;
     background-color: #fafafa; }
-  body .top-products {
-    max-width: 88.140556369%;
-    margin: 9rem auto 0;
-    background-color: #fff; }
-    body .top-products__wrapper {
-      position: relative;
-      border-radius: 1rem;
-      overflow: hidden; }
-      @media (max-width: 56.25em) {
-        body .top-products__wrapper {
-          padding: 0 3rem; } }
-    @media (max-width: 56.25em) {
-      body .top-products {
-        max-width: 100%;
-        margin: 6rem 0; } }
   body .footer {
     margin-top: 9.7rem;
     background-color: #fff; }

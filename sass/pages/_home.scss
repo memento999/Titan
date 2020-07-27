@@ -14,28 +14,6 @@ body {
     }
   }
 
-  // top products section
-  .top-products {
-    max-width: 88.140556369%;
-    margin: 9rem auto 0;
-    background-color: $color-white;
-
-    &__wrapper {
-      position: relative;
-      border-radius: 1rem;
-      overflow: hidden;
-
-      @include respond(tab-port) {
-        padding: 0 3rem;
-      }
-    }
-
-    @include respond(tab-port) {
-      max-width: 100%;
-      margin: 6rem 0;
-    }
-  }
-
   // footer
   .footer {
     margin-top: 9.7rem;

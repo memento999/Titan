@@ -3,21 +3,21 @@
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  width: 19.6rem;
-  height: 5rem;
-  border-radius: 1rem;
-  font-size: $font-size-sm;
+  width: #{"max(19.6rem, 165px)"};
+  height: #{"max(5rem, 42px)"};
+  border-radius: 10px;
   background-color: $primary-color;
   color: $color-white;
 
   &__icon {
-    margin-left: 2rem;
-    width: 2.2rem;
-    height: 2.2rem;
+    margin-left: 20px;
+    width: 22px;
+    height: 22px;
   }
 
   &__caption {
-    margin-right: 2rem;
+    margin-right: 34px;
+    font-size: 12px;
     line-height: 1.25;
   }
 }

@@ -31,7 +31,7 @@ let header = document.getElementsByTagName('header')[0];
 window.onscroll = scrollFunction;
 
 function scrollFunction() {
-    if (!menuOpen && window.pageYOffset >= 1) {
+    if (!menuOpen && window.pageYOffset >= 30) {
         header.style.height = "8rem";
     } else {
         header.style.height = "11rem";
