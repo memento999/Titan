@@ -55,11 +55,14 @@ body {
 
 @keyframes header-dropdown {
   0% {
-    transform: translateY(-4rem); }
+    transform: translateY(-10rem);
+    opacity: 0; }
   80% {
-    transform: translateY(1.5rem); }
+    transform: translateY(1.5rem);
+    opacity: 0.6; }
   100% {
-    transform: translateY(0); } }
+    transform: translateY(0);
+    opacity: 1; } }
 
 @font-face {
   font-family: "BPG LE Studio 04 Caps";

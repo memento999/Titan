@@ -33,7 +33,7 @@ var prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
-        header.style.top = "0";
+        header.style.top = "";
     } else {
         header.style.top = "-11rem"; // 11rem is the height of header element
     }
