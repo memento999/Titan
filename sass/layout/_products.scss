@@ -1,6 +1,7 @@
 .products {
   &__header {
     padding: 3.9rem 0 0 3rem;
+    font-size: 16px;
 
     @include respond(phone-land) {
       padding: 0;
@@ -22,8 +23,14 @@
     align-items: center;
     flex-wrap: wrap;
 
-    &-unit:not(:last-child) {
-      margin-bottom: 20px;
+    &-unit {
+      margin-bottom: 32px;
+    }
+
+    @include respond (phone-land) {
+      &-unit {
+        margin-bottom: 20px;
+      }
     }
   }
 }

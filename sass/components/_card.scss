@@ -1,5 +1,4 @@
 .card {
-  // width: 21.4rem;
   width: #{"max(21.4rem, 165px)"};
   transition: all .3s ease-in-out;
   border: 1px solid transparent;
@@ -40,7 +39,7 @@
 
   // card details
   &__details {
-    margin: 1.6rem 1rem 3.1rem 1rem;
+    margin: 16px 1rem 3.1rem 1rem;
   }
 
   &__title {
@@ -48,7 +47,7 @@
     font-size: #{"min(max(14px, calc(0.875em + ((1vw - 3.75px) * 0.4036))), 18px)"};
     color: $color-very-dark-grey;
     line-height: 2.556;
-    margin-bottom: 1.5rem;
+    margin-bottom: 15px;
   }
 
   &__price {

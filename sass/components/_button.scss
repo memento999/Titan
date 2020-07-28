@@ -19,5 +19,9 @@
     margin-right: 34px;
     font-size: 12px;
     line-height: 1.25;
+
+    @include respond(big-desktop) {
+      font-size: 16px;
+    }
   }
 }

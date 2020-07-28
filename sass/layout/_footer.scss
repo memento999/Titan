@@ -82,7 +82,7 @@
       }
 
       &:not(:last-child) {
-        margin-right: 17px;
+        margin-right: 15px;
       }
     }
   }
@@ -92,9 +92,8 @@
     justify-content: space-between;
     align-items: center;
     height: 9.7rem;
-    border-bottom: 1px solid #f2f4f7;
 
-    span {
+    a {
       color: $primary-color;
     }
 
@@ -103,13 +102,21 @@
       align-items: center;
       justify-content: center;
       height: 18rem;
+      border-bottom: 1px solid #f2f4f7;
+
+
 
       p {
-        font-size: 2.4rem;
-      }
 
-      p:not(:last-child) {
-        margin-bottom: 1rem;
+        &:last-child {
+          line-height: 1.5;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 7px;
+          line-height: 1.28;
+          font-size: 12px;
+        }
       }
     }
   }

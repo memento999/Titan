@@ -1,6 +1,7 @@
 .about-us {
   &__header {
     margin: 4rem 0 0 3rem;
+    font-size: 16px;
 
     @include respond(phone-land) {
       width: 100%;

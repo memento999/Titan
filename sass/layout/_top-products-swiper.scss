@@ -1,12 +1,18 @@
 .top-products {
-  max-width: 88.140556369%;
+  max-width: 88.21376281112738%;
   position: relative;
   overflow: hidden;
   margin: 9rem auto 0;
   background-color: $color-white;
+  border-radius: 10px;
+
+  @include respond(phone-land) {
+    max-width: 92%;
+  }
 
   &__header {
     margin: 3.2rem 0 0 3rem;
+    font-size: 16px;
   }
 
   &__link {
@@ -14,23 +20,21 @@
 
     a {
       text-decoration: none;
-      font-size: $font-size-md;
       color: $primary-color;
-
-      @include respond(phone-port) {
-        font-size: 12px;
-      }
-
-      @include respond(phone-land) {
-        font-size: 12px;
-      }
     }
   }
 
   &__swiper {
     background-color: $color-white;
-    padding: 2rem 3rem 4rem 3rem;
+    margin-right: 3rem;
+    padding: 20px 0 5rem 3.1rem;
+
+    @include respond(phone-land) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
   }
+
 
   &__slide {
     width: auto;

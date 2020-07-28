@@ -28,12 +28,14 @@ document.getElementById('header__menu-btn').addEventListener("click", () => {
 
 let header = document.getElementsByTagName('header')[0];
 
-window.onscroll = scrollFunction;
-
-function scrollFunction() {
-    if (!menuOpen && window.pageYOffset >= 30) {
-        header.style.height = "8rem";
+/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+        header.style.top = "0";
     } else {
-        header.style.height = "11rem";
+        header.style.top = "-11rem"; // 11rem is the height of header element
     }
-}
+    prevScrollpos = currentScrollPos;
+} 

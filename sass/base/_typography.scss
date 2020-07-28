@@ -30,27 +30,21 @@
 
 .heading-primary {
   color: $color-black;
-  font-size: $font-size-massive;
+  font-size: #{"min(max(18px, calc(1.125rem + ((1vw - 3.75px) * 1.4127))), 32px)"};
   font-weight: 400;
   line-height: 1.25;
   letter-spacing: 0;
 }
 
 .heading-secondary {
-  color: $color-black;
-  font-size: $font-size-huge;
-  font-weight: 400;
+  font-size: #{"min(max(18px, calc(1.125em + ((1vw - 3.75px) * 0.6054))), 24px)"};
   line-height: 1.333;
+  font-weight: 400;
   letter-spacing: 0;
+  color: $color-black;
 
-  @include respond(phone-land) {
-    font-size: 20px;
-    line-height: 1.5;
-  }
-
-  @include respond(phone-port) {
-    font-size: 18px;
-    line-height: 1.8;
+  @include respond(big-desktop) {
+    font-size: 26px;
   }
 }
 
@@ -63,17 +57,22 @@
 }
 
 .paragraph {
-  font-size: $font-size-md;
+  font-size: 14px;
   font-family: "Helvetica Neue LTGEOW 82-55 Rm";
   font-weight: 400;
   line-height: 1.5715;
   letter-spacing: 0;
 
-  @include respond(phone-land) {
-    font-size: 15px;
+  @include respond(big-desktop) {
+    font-size: 16px;
+    line-height: 1.625;
   }
+}
 
-  @include respond(phone-port) {
-    font-size: 14px;
+.link {
+  font-size: #{"min(max(12px, calc(0.75em + ((1vw - 3.75px) * 0.2018))), 14px)"};
+
+  @include respond(big-desktop) {
+    font-size: 16px;
   }
 }
